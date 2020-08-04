@@ -32,5 +32,6 @@ module.exports = function wechat(msg, code, data) {
                 console.log(error);
             });
     }
+    console.log("微信通知流程已执行！");
 
 }
