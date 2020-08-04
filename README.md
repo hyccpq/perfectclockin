@@ -1,9 +1,5 @@
-
-
 # 完美打卡 PerfectClockIn
 > 完美校园自动健康打卡，仅供个人研究/学习/欣赏,请勿用于商业用途,否则产生的一切后果将由您自己承担。
->
-> GitHub链接：[完美打卡](https://github.com/ni00/perfectclockin)
 
 ## 使用技术
 + ServerLess Function（云函数）
@@ -55,26 +51,26 @@ notice: {
 > 下面的部署过程基于腾讯云函数，但理论上支持阿里云函数/云开发
 
 #### 1.登录[腾讯云函数]控制台(https://console.cloud.tencent.com/scf/)
-![](C:\project\markdown\Untitled.assets\sfc1.png!mini)
+![](https://image.nixiaobai.com/static/sfc1.png!mini)
 
 #### 2.创建云函数，选择空白模板或者HelloWorld模板
-![](C:\project\markdown\Untitled.assets\sfc2.png!mini)
+![](https://image.nixiaobai.com/static/sfc2.png!mini)
 
 #### 3.检查配置信息，确认无误
-![](C:\project\markdown\Untitled.assets\sfc3.png!mini)
+![](https://image.nixiaobai.com/static/sfc3.png!mini)
 
 #### 4.上传所有js文件和package.json，并且修改好config.js。（如果并非全量上传，请选择在线安装依赖！）
-![](C:\project\markdown\Untitled.assets\sfc4.png!mini)
+![](https://image.nixiaobai.com/static/sfc4.png!mini)
 
 #### 5.保存并测试
-![](C:\project\markdown\Untitled.assets\sfc7.png!mini)
+![](https://image.nixiaobai.com/static/sfc7.png!mini)
 
 #### 6.设置定时触发器即可
-![](C:\project\markdown\Untitled.assets\sfc6.png!mini)
+![](https://image.nixiaobai.com/static/sfc6.png!mini)
 
 #### 7.打卡成功图片（你可以修改wechat.js、mail.js来定制消息通知样式）
-<img src="https://image.nixiaobai.com/static/sfc9.jpg!mini" style="zoom:33%;" />
-<img src="https://image.nixiaobai.com/static/sfc8.jpg!mini" style="zoom:33%;" />
+![](https://image.nixiaobai.com/static/sfc9.jpg!mini)
+![](https://image.nixiaobai.com/static/sfc8.jpg!mini)
 
 ## 感谢
 > 本项目参考了两个Python打卡项目，在此表示感谢
