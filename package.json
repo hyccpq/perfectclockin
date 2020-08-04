@@ -9,6 +9,7 @@
   "author": "nixiaobai",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.31"
   }
 }

@@ -1,9 +1,4 @@
 const config = {
-    user: {
-        phone: "",
-        password: "",
-        token: ""
-    },
     info: {
         TEXT: "",//(学院专业班级信息)                例：林学院-林学(陶铸实验班)-2017林学(陶铸实验班)1班
         DEPTID: "",//(未知id字段)                   例：141670
@@ -18,9 +13,7 @@ const config = {
         EMERGENCYPHONE: ""//(紧急联系人电话)        例：23667712771
     },
     notice: {
-        weChat: {
-            token: ""
-        },
+        weChat_sckey:  "",
         mail: {
             from: {
                 host: 'smtp.126.com',   //设置主机，如果是QQ请换成smtp.qq.com

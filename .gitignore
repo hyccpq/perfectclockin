@@ -5,4 +5,4 @@ dist/
 test/
 *.log
 logs/
-test.js
+test/test.js
