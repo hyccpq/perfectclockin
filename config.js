@@ -13,14 +13,14 @@ const config = {
         EMERGENCYPHONE: ""//(紧急联系人电话)        例：23667712771
     },
     notice: {
-        weChat_sckey:  "",
+        weChat_sckey:  "SCU64210T39c12896f84b71b53ac716e877146fde5da459c477ee7",
         mail: {
             from: {
-                host: 'smtp.126.com',   //设置主机，如果是QQ请换成smtp.qq.com
-                user: 'xxxxxxxx@126.com',       //邮箱账户
+                host: '',   //设置主机，如果是QQ请换成smtp.qq.com
+                user: '',       //邮箱账户
                 passCode:"",   //邮箱授权码，非密码
             },
-            to: "123456@qq.com"
+            to: "" //接收邮箱
 
         }
     }

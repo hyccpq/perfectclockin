@@ -1,6 +1,7 @@
 const axios = require("axios");
 const config = require("./config");
 const wechat = require("./wechat");
+const mail = require("./mail");
 
 module.exports = function clockIn() {
     //API接口
@@ -66,7 +67,7 @@ module.exports = function clockIn() {
             const code = result.code;
             const data = result.data;
             wechat(msg,code,data);//调用微信通知
-
+            mail(msg,code,data);//调用邮箱通知
 
         })
         .catch((error)=> {
