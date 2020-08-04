@@ -16,7 +16,7 @@ module.exports = function wechat(msg, code, data) {
         打卡时间：${dayjs().format('YYYY-MM-DD HH:mm:ss')}
         
         响应数据：
-        { msg: "${msg}", code: "${code}", data: "${data}"
+        { msg: "${msg}", code: "${code}", data: "${data}"}
         
         GitHub链接:https://github.com/ni00/perfectclockin
         
