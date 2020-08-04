@@ -1,0 +1,11 @@
+{
+  "name": "perfectclockin",
+  "version": "1.0.0",
+  "description": "完美打卡",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "nixiaobai",
+  "license": "MIT"
+}
