@@ -22,7 +22,7 @@ module.exports = function clockIn() {
         'X-Requested-With': 'com.newcapec.mobile.ncp'
     }
     //地址信息
-    const area = {'address': config.info.ADDRESS, 'text': config.info.TEXT, 'code': config.info.CODE}
+    const area = {'address': config.info.ADDRESS, 'text': config.info.ADDTEXT, 'code': config.info.CODE}
     //请求数据
     const jsons = {
         "businessType": "epmpics", "method": "submitUpInfo",
