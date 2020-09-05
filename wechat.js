@@ -16,7 +16,7 @@ module.exports = function wechat(msg, code, data, jsons) {
     axios
       .post(url, {
         appToken,
-        content: "打卡信息提示：\n" + desp + "\n" + jsons,
+        content: "打卡信息提示：\n" + desp + "\n\n" + JSON.stringify(jsons),
         summary: text,
         uids: userIds,
       })

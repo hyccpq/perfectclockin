@@ -1,5 +1,7 @@
+const Time = require("china-time");
+
 function getCurrentTime() {
-  var date = new Date();
+  var date = new Time();
   return date.getHours();
 }
 

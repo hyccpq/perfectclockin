@@ -1,3 +1,7 @@
-const { main } = require("./index");
+// const { main } = require("./index");
 
-main();
+// main();
+const time = require("china-time");
+
+var a = new time();
+console.log(a.getHours());
