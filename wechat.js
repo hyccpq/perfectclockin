@@ -1,37 +1,31 @@
 const axios = require("axios");
-const config = require("./config");
+const { config } = require("./config");
 const dayjs = require("dayjs");
 
-function urlencode (str) {
-    str = (str + '').toString();
-    return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
-    replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
-}
+module.exports = function wechat(msg, code, data, jsons) {
+  let appToken = config.appToken;
+  let userIds = config.userIds;
+  const time = dayjs().format("YYYY-MM-DD HH:mm");
+  const text = `【完美打卡】\n${time}\n 当前状态: ${data}`;
+  const desp = `打卡时间 ${time}\n数据 { msg: "${msg}", code: "${code}", data: "${data}"}
+        `;
 
-module.exports = function wechat(msg, code, data) {
-    let sckey = config.notice.weChat_sckey;
+  const url = `http://wxpusher.zjiecode.com/api/send/message`;
 
-    const text= urlencode(`【完美打卡】——${msg}`);
-    const desp= urlencode(`
-        打卡时间：${dayjs().format('YYYY-MM-DD HH:mm:ss')}
-        
-        响应数据：
-        { msg: "${msg}", code: "${code}", data: "${data}"}
-        
-        GitHub链接:https://github.com/ni00/perfectclockin
-        
-        `)
-
-    const url = `https://sc.ftqq.com/${sckey}.send?text=${text}&desp=${desp}`;
-
-    if (sckey) {
-        axios.get(url).then((response) => {
-            console.log(response.data);
-        })
-            .catch((error) => {
-                console.log(error);
-            });
-    }
-    console.log("微信通知流程已执行！");
-
-}
+  if (appToken) {
+    axios
+      .post(url, {
+        appToken,
+        content: "打卡信息提示：\n" + desp + "\n" + jsons,
+        summary: text,
+        uids: userIds,
+      })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  console.log("微信通知流程已执行！");
+};

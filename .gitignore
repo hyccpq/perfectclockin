@@ -6,3 +6,4 @@ test/
 *.log
 logs/
 test/test.js
+config.js

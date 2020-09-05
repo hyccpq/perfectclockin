@@ -4,7 +4,7 @@
   "description": "完美打卡",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node test.js"
   },
   "author": "nixiaobai",
   "license": "MIT",
